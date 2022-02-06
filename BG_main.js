@@ -13,33 +13,28 @@ const setGradient = () => {
   }
   console.log(selectedValue);
 
-  // const setGradient = () => {
-  //   console.log(color1.value);
-  //   console.log(color2.value);
+  if (selectedValue == "to center") {
+    // console.log(5);
+    // return selectedValue;
+    // document.querySelector(".square").style.backgroundImage = `radial-gradient(${color1.value}, ${color2.value})`;
+    document.body.style.backgroundImage = `radial-gradient(${color1.value}, ${color2.value})`;
 
-  //   console.log(direction);
-  //   console.log(direction[0].value);
-
-  document.body.style.backgroundImage = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
-
-  // document.getElementsByName(
-  //   "square"
-  // ).style.background = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
-
-  // console.log(getElementsByClassName());
-
-  // document.getElementById(
-  //   "square"
-  // ).style.backgroundImage = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
-
-  // document.body.style.marginTop = "100px";
-
-  // document.body.style.marginLeft = "50px";
-
-  // document.getElementsById("square").style.marginLeft = "50px";
+    // return color1.value, color2.value;
+  } else {
+    // console.log(10);
+    // document.querySelector(".square").style.backgroundImage = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
+    document.body.style.backgroundImage = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
+    // console.log(color1.value);
+    // document.getElementById("codCol1").innerHTML = "color 1:  " + color1.value;
+    // document.getElementById("codCol2").innerHTML = "color 2:  " + color2.value;
+    // document.querySelector(".codCol").value = color1.value;
+    // document.getElementById("codCol").value = color1.value;
+  }
+  document.getElementById("codCol1").innerHTML = "color 1:  " + color1.value;
+  document.getElementById("codCol2").innerHTML = "color 2:  " + color2.value;
+  // document.body.style.backgroundImage = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
 };
 
-//   "linear-gradient(" + color1.value + "," + color2.value + ")";
-
-// document;
 form.addEventListener("change", setGradient);
+
+//hints:  background-image: radial-gradient(#e66465, #9198e5);
